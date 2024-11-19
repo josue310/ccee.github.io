@@ -1,17 +1,37 @@
 const path = require('path');
+require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
+const connectDB = require('./config/database');
+const messageRoutes = require('./routes/messages');
+
 const app = express();
 
-// Serve les fichiers statiques de React depuis le dossier 'dist'
+// Connect to MongoDB
+connectDB();
+
+// Middleware
+app.use(cors({
+  origin: 'http://192.168.1.126:300', // Remplacez par votre adresse IP ou nom de domaine
+}));
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+
+
+// API Routes
+app.use('/api/messages', messageRoutes);
+
+// Serve static files from React build
 app.use(express.static(path.join(__dirname, '../Frontend/dist')));
 
-// Route par défaut pour envoyer l'application React
+// Handle React routing
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../Frontend/dist', 'index.html'));
 });
 
-// Démarre le serveur
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running on port ${PORT}`);
 });

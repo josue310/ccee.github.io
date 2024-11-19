@@ -3,6 +3,13 @@ import { motion, AnimatePresence, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { ArrowRight, BookOpen, Users, Calendar, ChevronRight, X, Heart, MessageCircle, Bookmark } from 'lucide-react'
 import CarrouselConditionnel from '../Components/CarrouselConditionnel'
+import temoignage1 from '../assets/Images/temoignage1.jpg'
+import temoignage2 from '../assets/Images/temoignage2.jpg'
+import Fetes from '../assets/Images/Fetes.jpg'
+import temoignage3 from '../assets/Images/temoignage3.jpg'
+import actualité3 from '../assets/Images/actualités3.jpg'
+import prière from '../assets/Images/priere.jpg'
+import formation from '../assets/Images/formation.jpg'
 
 export default function ToutSavoir() {
   const [selectedActivity, setSelectedActivity] = useState(null)
@@ -62,7 +69,7 @@ export default function ToutSavoir() {
       description: "Tous les Mardis de 19h00 - 21h00 à l'ESATIC (TWIN 1)",
       icon: Users,
       link: "#",
-      image: "/placeholder.svg?height=400&width=600",
+      image: prière,
       details: "Nos séances de prière communautaire sont un moment privilégié pour se ressourcer spirituellement et renforcer les liens entre les membres de la CCEE."
     },
     {
@@ -70,7 +77,7 @@ export default function ToutSavoir() {
       description: "Sessions mensuelles de formation et de partage",
       icon: BookOpen,
       link: "#",
-      image: "/placeholder.svg?height=400&width=600",
+      image: formation,
       details: "Nos formations spirituelles visent à approfondir la foi et la connaissance de la doctrine catholique, adaptées au contexte étudiant."
     },
     {
@@ -78,7 +85,7 @@ export default function ToutSavoir() {
       description: "Célébrations et rassemblements communautaires",
       icon: Calendar,
       link: "#",
-      image: "/placeholder.svg?height=400&width=600",
+      image: Fetes,
       details: "Nous organisons régulièrement des événements spéciaux pour célébrer les temps forts de l'année liturgique et renforcer notre communauté."
     }
   ]
@@ -91,9 +98,9 @@ export default function ToutSavoir() {
   ]
 
   const testimonials = [
-    { name: 'Marie K.', text: 'La CCEE m\'a aidée à garder ma foi forte pendant mes études.', avatar: '/placeholder.svg?height=100&width=100' },
-    { name: 'Jean L.', text: 'J\'ai trouvé une vraie famille spirituelle ici.', avatar: '/placeholder.svg?height=100&width=100' },
-    { name: 'Sophie M.', text: 'Les formations m\'ont permis d\'approfondir ma connaissance de la Bible.', avatar: '/placeholder.svg?height=100&width=100' }
+    { name: 'Jaurès Mian', text: 'Mon expérience à la CCEE m’a permis de croître spirituellement et humainement. Ces moments de prière et de communion fraternelle ont renforcé ma relation avec Dieu et les membres de la communauté. J’ai également reçu une formation approfondie sur la foi catholique, m’aidant à éviter les dérives dans ma vie quotidienne. Enfin, j’y ai noué des amitiés sincères et durables.', avatar: temoignage1 },
+    { name: 'Anderson ABE, Promo IT11', text: 'Les louanges adressées à Dieu à travers la musique chrétienne sont devenu aujourd’hui mon quotidien. Je ne peux pas travailler sans écouter et chanter des louanges à lendroit de Dieu,Je dois celà à la CCEE', avatar: temoignage2 },
+    { name: 'Habib Roland TUO', text: 'Les formations m\'ont permis d\'approfondir ma connaissance de la Bible.', avatar: temoignage3 }
   ]
 
   return (
@@ -327,7 +334,7 @@ export default function ToutSavoir() {
               >
                 <div className="bg-white rounded-xl shadow-md overflow-hidden">
                   <img
-                    src="/placeholder.svg?height=200&width=400"
+                    src={actualité3}
                     alt={`Actualité ${item}`}
                     className="w-full h-48 object-cover"
                   />
