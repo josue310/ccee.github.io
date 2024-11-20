@@ -91,10 +91,10 @@ export default function ToutSavoir() {
   ]
 
   const events = [
-    { date: '15 Nov', title: 'Soirée de louange', location: 'ESATIC Amphi A' },
-    { date: '22 Nov', title: 'Étude biblique', location: 'Salle de conférence' },
-    { date: '1 Déc', title: 'Retraite spirituelle', location: 'Centre pastoral' },
-    { date: '10 Déc', title: 'Messe de l\'Avent', location: 'Chapelle universitaire' }
+    { date: '21 Nov 2024', title: 'Messe de Rentrée', location:`A l Amphi de l ESATIC ` },
+    { date: '14 Dec2024', title: 'Célèbration des 10ans ', location: ' Lieu :  A Définir' },
+    { date: 'Déc 2024', title: 'Noël anticipé(Festinoël)', location: 'Lieu : A Définir' },
+    { date: ' Avril 2025', title: 'Jardins des Oliviers(JDO)', location: 'Lieu : A Définir' }
   ]
 
   const testimonials = [

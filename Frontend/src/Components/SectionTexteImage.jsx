@@ -21,7 +21,7 @@ function SectionTexteImage() {
           >
             <h2 className="text-3xl font-bold mb-4">Moment de joie et de détente</h2>
             <p className="text-gray-600 mb-6">
-
+            C'est dans cet esprit de communion que la Communauté Catholique des Étudiants de l'ESATIC organise des moments de joie et de détente. Ces instants privilégiés prennent la forme de sorties conviviales, de pèlerinages spirituels et d'autres activités enrichissantes, permettant à ses membres de se retrouver, de partager et de renforcer leurs liens dans une ambiance fraternelle et chaleureuse.
             </p>
           </motion.div>
           <motion.div 

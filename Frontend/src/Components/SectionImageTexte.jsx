@@ -23,7 +23,7 @@ function SectionImageTexte() {
           <div className="md:w-2/3 md:pl-12">
             <h2 className="text-3xl font-bold mb-4">Entretenir des liens de fraternel</h2>
             <p className="text-gray-600 mb-6">
-              C'est dans cette vision que tous les Dimanches, les membres de la Communauté Catholique des Etudiants de l'ESATIC se rassemblent pour participer a la messe dans la paroisse plus proche de l'ESATIC
+            C'est dans cette vision que, tous les dimanches, les membres de la Communauté Catholique des Étudiants de l'ESATIC se rassemblent pour participer à la messe dans la paroisse la plus proche de l'ESATIC. Ce moment de prière et de recueillement est aussi une occasion pour renforcer les liens fraternels entre les membres. Par ailleurs, la communauté ne se limite pas à la messe dominicale : elle organise régulièrement des sorties, participe à des pèlerinages et prend part à des événements religieux qui nourrissent la foi et la cohésion de ses membres.
             </p>
           </div>
         </div>

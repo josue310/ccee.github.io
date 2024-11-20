@@ -12,7 +12,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: 'http://192.168.1.126:300', // Remplacez par votre adresse IP ou nom de domaine
+  origin: 'http://192.168.1.126:3000', // Remplacez par votre adresse IP ou nom de domaine
 }));
 
 app.use(express.json());
