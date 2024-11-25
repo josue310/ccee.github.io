@@ -1,7 +1,10 @@
+// routes/messages.js
+
 const express = require('express');
 const router = express.Router();
 const Message = require('../models/Message');
 
+// Route pour envoyer un message
 router.post('/submit', async (req, res) => {
   try {
     const { nom, email, message } = req.body;
@@ -19,10 +22,10 @@ router.post('/submit', async (req, res) => {
       message: 'Message envoyé avec succès' 
     });
   } catch (error) {
-    console.error('Error submitting message:', error);
+    console.error('Erreur lors de l\'envoi du message:', error);
     res.status(500).json({ 
       success: false, 
-      message: 'Erreur lors de l\'envoi du message' 
+      message: 'Erreur serveur lors de l\'envoi du message' 
     });
   }
 });

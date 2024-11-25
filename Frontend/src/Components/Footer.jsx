@@ -34,7 +34,7 @@ function Footer() {
             </p>
             <blockquote className="italic border-l-4 border-blue-500 pl-4 mb-4">
               "Notre vision est de former des leaders chrétiens qui excelleront dans leur domaine professionnel tout en restant fidèles à leurs valeurs."
-              <footer className="text-sm mt-2">- Premier Président de la Communauté</footer>
+              <footer className="text-sm mt-2">- La CCEE</footer>
             </blockquote>
           </div>
 

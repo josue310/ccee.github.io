@@ -1,3 +1,5 @@
+// server.js
+
 const path = require('path');
 require('dotenv').config();
 const express = require('express');
@@ -7,31 +9,30 @@ const messageRoutes = require('./routes/messages');
 
 const app = express();
 
-// Connect to MongoDB
+// Connexion à MongoDB
 connectDB();
 
 // Middleware
-app.use(cors({
-  origin: 'http://192.168.1.126:3000', // Remplacez par votre adresse IP ou nom de domaine
-}));
+// app.use(cors({
+//   origin: 'http://192.168.1.162:3000', // Remplacez par l'IP ou le nom de domaine de votre frontend
+// }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
-
-// API Routes
+// Routes API
 app.use('/api/messages', messageRoutes);
 
-// Serve static files from React build
+// Serve les fichiers statiques de React build
 app.use(express.static(path.join(__dirname, '../Frontend/dist')));
 
-// Handle React routing
+// Gérer le routage React
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../Frontend/dist', 'index.html'));
 });
 
+// Démarrage du serveur
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Le serveur fonctionne sur le port ${PORT}`);
 });

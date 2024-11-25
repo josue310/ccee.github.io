@@ -26,10 +26,11 @@ const diapositives = [
   },
   {
     image: ImageC4,
-    titre: 'FESTIVITES',
-    sousTitre: 'LIEU: ESATIC (TWIN 1) ',
-    description: 'Nos rencontres de prière en communauté se font tous les Mardis de 19h00 - 21h00, l\'objectif principal a travers ces rencontres de prière est de maintenir la vie de prière des communautaire parallèlement aux difficultés de la vie étudiant'
+    titre: 'FESTIVITÉS',
+    sousTitre: 'LIEU: ???',
+    description: 'Nous organisons des fêtes pour partager des moments de joie 🎉 et renforcer la fraternité 🤝. Ces événements sont l’occasion de célébrer ensemble les bienfaits de Dieu et de créer des liens solides entre les membres 🙏.'
   }
+  
 ];
 
 export default function Carrousel() {

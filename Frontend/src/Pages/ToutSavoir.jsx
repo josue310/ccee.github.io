@@ -98,9 +98,9 @@ export default function ToutSavoir() {
   ]
 
   const testimonials = [
-    { name: 'Jaurès Mian', text: 'Mon expérience à la CCEE m’a permis de croître spirituellement et humainement. Ces moments de prière et de communion fraternelle ont renforcé ma relation avec Dieu et les membres de la communauté. J’ai également reçu une formation approfondie sur la foi catholique, m’aidant à éviter les dérives dans ma vie quotidienne. Enfin, j’y ai noué des amitiés sincères et durables.', avatar: temoignage1 },
-    { name: 'Anderson ABE, Promo IT11', text: 'Les louanges adressées à Dieu à travers la musique chrétienne sont devenu aujourd’hui mon quotidien. Je ne peux pas travailler sans écouter et chanter des louanges à lendroit de Dieu,Je dois celà à la CCEE', avatar: temoignage2 },
-    { name: 'Habib Roland TUO', text: 'Les formations m\'ont permis d\'approfondir ma connaissance de la Bible.', avatar: temoignage3 }
+    { name: 'Jaurès Mian', text: 'Mon expérience à la CCEE m’a fait grandir spirituellement ✝️ et humainement 🤝. Les moments de prière 🙏 et de communion fraternelle 🤗 ont renforcé ma relation avec Dieu et les membres de la communauté. J’y ai aussi reçu une formation sur la foi catholique 📖, tout en forgeant des amitiés sincères et durables ❤️.', avatar: temoignage1 },
+    { name: 'Anderson ABE, Promo IT11', text: 'Les louanges adressées à Dieu à travers la musique chrétienne 🎶✝️ sont devenues aujourd’hui mon quotidien. Je ne peux pas travailler sans écouter 🎧 et chanter 🎤 des louanges à l’endroit de Dieu 🙌. Je dois cela à la CCEE ❤️.', avatar: temoignage2 },
+    { name: 'Habib Roland TUO', text: `J'ai été président de la Commission évangélisation de la CCEE à l'ESATIC (2018-2019), une expérience enrichissante qui a renforcé ma spiritualité ✝️ et mon leadership 👨‍💼. La CCEE a été une véritable famille ❤️, incarnant des valeurs d'amour 🤝, d'entraide 🤲 et de soutien 🌟.`, avatar: temoignage3 }
   ]
 
   return (
