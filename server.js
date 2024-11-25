@@ -4,8 +4,8 @@ const path = require('path');
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const connectDB = require('./config/database');
-const messageRoutes = require('./routes/messages');
+const connectDB = require('./Backend/config/database');
+const messageRoutes = require('./Backend/routes/messages');
 
 const app = express();
 
@@ -13,9 +13,10 @@ const app = express();
 connectDB();
 
 // Middleware
-// app.use(cors({
-//   origin: 'http://192.168.1.162:3000', // Remplacez par l'IP ou le nom de domaine de votre frontend
-// }));
+// Décommentez et ajustez la ligne ci-dessous si vous souhaitez limiter l'accès à votre API à un domaine spécifique (par exemple, votre frontend en développement)
+app.use(cors({
+  // origin: 'http://192.168.1.162:3000', // Remplacez par l'IP ou le nom de domaine de votre frontend
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
