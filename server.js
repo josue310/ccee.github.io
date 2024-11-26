@@ -1,5 +1,3 @@
-// server.js
-
 const path = require('path');
 require('dotenv').config();
 const express = require('express');
@@ -8,6 +6,12 @@ const connectDB = require('./Backend/config/database');
 const messageRoutes = require('./Backend/routes/messages');
 
 const app = express();
+
+// Vérification de la présence de la variable d'environnement MONGO_URI
+if (!process.env.MONGO_URI) {
+  console.error('La variable d\'environnement MONGO_URI est manquante.');
+  process.exit(1); // Arrêter l'application si la variable est manquante
+}
 
 // Connexion à MongoDB
 connectDB();
