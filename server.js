@@ -19,7 +19,7 @@ connectDB();
 // Middleware
 // Décommentez et ajustez la ligne ci-dessous si vous souhaitez limiter l'accès à votre API à un domaine spécifique (par exemple, votre frontend en développement)
 app.use(cors({
-  // origin: 'http://192.168.1.162:3000', // Remplacez par l'IP ou le nom de domaine de votre frontend
+  origin: 'http://localhost:3000', // Remplacez par l'IP ou le nom de domaine de votre frontend
 }));
 
 app.use(express.json());
@@ -37,7 +37,7 @@ app.get('*', (req, res) => {
 });
 
 // Démarrage du serveur
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Le serveur fonctionne sur le port ${PORT}`);
 });
