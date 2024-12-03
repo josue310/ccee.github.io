@@ -17,7 +17,6 @@ if (!process.env.MONGO_URI) {
 connectDB();
 
 // Middleware
-// Décommentez et ajustez la ligne ci-dessous si vous souhaitez limiter l'accès à votre API à un domaine spécifique (par exemple, votre frontend en développement)
 app.use(cors({
   origin: 'http://localhost:3000', // Remplacez par l'IP ou le nom de domaine de votre frontend
 }));
@@ -28,10 +27,10 @@ app.use(express.urlencoded({ extended: true }));
 // Routes API
 app.use('/api/messages', messageRoutes);
 
-// Serve les fichiers statiques de React build
+// Serve les fichiers statiques de React build (frontend)
 app.use(express.static(path.join(__dirname, '../Frontend/dist')));
 
-// Gérer le routage React
+// Gérer le routage React pour les routes non-API
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../Frontend/dist', 'index.html'));
 });
