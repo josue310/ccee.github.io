@@ -28,11 +28,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/messages', messageRoutes);
 
 // Serve les fichiers statiques de React build (frontend)
-app.use(express.static(path.join(__dirname, '../Frontend/dist')));
+app.use(express.static(path.join(__dirname, './Frontend/dist')));
 
 // Gérer le routage React pour les routes non-API
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../Frontend/dist', 'index.html'));
+  res.sendFile(path.join(__dirname, './Frontend/dist', 'index.html'));
 });
 
 // Démarrage du serveur
