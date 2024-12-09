@@ -7,6 +7,8 @@ import temoignage1 from '../assets/Images/temoignage1.jpg'
 import temoignage2 from '../assets/Images/temoignage2.jpg'
 import Fetes from '../assets/Images/Fetes.jpg'
 import temoignage3 from '../assets/Images/temoignage3.jpg'
+import actualité1 from '../assets/Images/actualité1.jpg'
+import actualité2 from '../assets/Images/actualité2.jpg'
 import actualité3 from '../assets/Images/actualités3.jpg'
 import prière from '../assets/Images/priere.jpg'
 import formation from '../assets/Images/formation.jpg'
@@ -91,32 +93,37 @@ export default function ToutSavoir() {
   ]
 
   const events = [
-    { date: '21 Nov 2024', title: 'Messe de Rentrée', location:`A l Amphi de l ESATIC ` },
+    { date: '21 Nov 2024', title: 'Messe de Rentrée', location: `A l Amphi de l ESATIC ` },
     { date: '14 Dec2024', title: 'Célèbration des 10ans ', location: ' Lieu :  A Définir' },
     { date: 'Déc 2024', title: 'Noël anticipé(Festinoël)', location: 'Lieu : A Définir' },
     { date: ' Avril 2025', title: 'Jardins des Oliviers(JDO)', location: 'Lieu : A Définir' }
   ]
 
   const testimonials = [
-    { name: 'Jaurès Mian', text: 'Mon expérience à la CCEE m’a fait grandir spirituellement ✝️ et humainement 🤝. Les moments de prière 🙏 et de communion fraternelle 🤗 ont renforcé ma relation avec Dieu et les membres de la communauté. J’y ai aussi reçu une formation sur la foi catholique 📖, tout en forgeant des amitiés sincères et durables ❤️.', avatar: temoignage1 },
-    { name: 'Anderson ABE, Promo IT11', text: 'Les louanges adressées à Dieu à travers la musique chrétienne 🎶✝️ sont devenues aujourd’hui mon quotidien. Je ne peux pas travailler sans écouter 🎧 et chanter 🎤 des louanges à l’endroit de Dieu 🙌. Je dois cela à la CCEE ❤️.', avatar: temoignage2 },
+    { name: 'Jaurès Mian', text:` Mon expérience à la CCEE m'a fait grandir spirituellement ✝️ et humainement 🤝. Les moments de prière 🙏 et de communion fraternelle 🤗 ont renforcé ma relation avec Dieu et les membres de la communauté. J'y ai aussi reçu une formation sur la foi catholique 📖, tout en forgeant des amitiés sincères et durables ❤️. ` , avatar: temoignage1 },
+    { name: 'Anderson ABE, Promo IT11', text: `Les louanges adressées à Dieu à travers la musique chrétienne 🎶✝️ sont devenues aujourd'hui mon quotidien. Je ne peux pas travailler sans écouter 🎧 et chanter 🎤 des louanges à l'endroit de Dieu 🙌. Je dois cela à la CCEE ❤️. ` , avatar: temoignage2 },
     { name: 'Prince-Junior Demeyia SREUSSI', text: `J'ai été président de la Commission évangélisation de la CCEE à l'ESATIC (2018-2019), une expérience enrichissante qui a renforcé ma spiritualité ✝️ et mon leadership 👨‍💼. La CCEE a été une véritable famille ❤️, incarnant des valeurs d'amour 🤝, d'entraide 🤲 et de soutien 🌟.`, avatar: temoignage3 }
   ]
+
+  const createWhatsAppLink = (message) => {
+    const phoneNumber = "+225 01 03 81 16 91";
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white overflow-hidden">
       <CarrouselConditionnel />
 
       {/* Section Héro */}
-      <motion.div 
+      <motion.div
         className="container mx-auto px-4 pt-16 pb-24 relative overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <motion.div 
-          className="absolute inset-0 z-0" 
-          animate={{ 
+        <motion.div
+          className="absolute inset-0 z-0"
+          animate={{
             backgroundImage: [
               'radial-gradient(circle, rgba(59,130,246,0.2) 0%, rgba(255,255,255,0) 70%)',
               'radial-gradient(circle, rgba(59,130,246,0.3) 0%, rgba(255,255,255,0) 70%)',
@@ -126,20 +133,20 @@ export default function ToutSavoir() {
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div className="text-center relative z-10" variants={staggerContainer} initial="initial" animate="animate">
-          <motion.h1 
+          <motion.h1
             className="text-4xl md:text-6xl font-bold text-blue-600 mb-6"
             variants={fadeInUp}
           >
             Découvrez nos activités
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
             variants={fadeInUp}
           >
             La Communauté Catholique des Étudiants de l'ESATIC vous propose diverses activités pour enrichir votre vie spirituelle et communautaire.
           </motion.p>
           <motion.div variants={fadeInUp}>
-            <motion.button 
+            <motion.button
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold flex items-center mx-auto transition-all duration-300 transform hover:scale-105"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -169,7 +176,7 @@ export default function ToutSavoir() {
             Nos activités principales
           </h2>
         </FadeInWhenVisible>
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10"
           variants={staggerContainer}
           initial="initial"
@@ -182,7 +189,7 @@ export default function ToutSavoir() {
               whileHover={{ scale: 1.05, rotateY: 5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div 
+              <div
                 className="bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg rounded-xl shadow-lg p-6 h-full cursor-pointer transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2"
                 onClick={() => setSelectedActivity(activity)}
               >
@@ -216,7 +223,7 @@ export default function ToutSavoir() {
             >
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-2xl font-bold text-blue-600">{selectedActivity.title}</h3>
-                <button 
+                <button
                   onClick={() => setSelectedActivity(null)}
                   className="text-gray-500 hover:text-gray-700"
                 >
@@ -236,7 +243,7 @@ export default function ToutSavoir() {
       {/* Calendrier des événements */}
       <div className="bg-blue-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.h2 
+          <motion.h2
             className="text-3xl md:text-4xl font-bold text-center mb-16 text-blue-600"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -245,7 +252,7 @@ export default function ToutSavoir() {
           >
             Calendrier des événements
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center"
             variants={staggerContainer}
             initial="initial"
@@ -278,7 +285,7 @@ export default function ToutSavoir() {
               Témoignages
             </h2>
           </FadeInWhenVisible>
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
             variants={staggerContainer}
             initial="initial"
@@ -292,9 +299,9 @@ export default function ToutSavoir() {
                 whileHover={{ scale: 1.05, rotateY: 5 }}
               >
                 <div className="bg-white rounded-lg shadow-md p-6 text-center transform transition-all duration-300 hover:shadow-xl">
-                  <motion.img 
-                    src={testimonial.avatar} 
-                    alt={testimonial.name} 
+                  <motion.img
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
                     className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-blue-200"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   />
@@ -310,7 +317,7 @@ export default function ToutSavoir() {
       {/* Section Actualités */}
       <div className="bg-gray-100 py-16">
         <div className="container mx-auto px-4">
-          <motion.h2 
+          <motion.h2
             className="text-3xl md:text-4xl font-bold text-center mb-16 text-blue-600"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -319,27 +326,31 @@ export default function ToutSavoir() {
           >
             Actualités récentes
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
           >
-            {[1, 2, 3].map((item) => (
+            {[
+              { id: 1, title: "Titre de l'actualité 1", image: actualité1 },
+              { id: 2, title: "Titre de l'actualité 2", image: actualité2 },
+              { id: 3, title: "Titre de l'actualité 3", image: actualité3 },
+            ].map((item) => (
               <motion.div
-                key={item}
+                key={item.id}
                 variants={fadeInUp}
                 whileHover={{ y: -10 }}
               >
                 <div className="bg-white rounded-xl shadow-md overflow-hidden">
                   <img
-                    src={actualité3}
-                    alt={`Actualité ${item}`}
+                    src={item.image}
+                    alt={`Actualité ${item.id}`}
                     className="w-full h-48 object-cover"
                   />
                   <div className="p-6">
-                    <h3 className="font-semibold text-xl mb-2">Titre de l'actualité {item}</h3>
+                    <h3 className="font-semibold text-xl mb-2">{item.title}</h3>
                     <p className="text-gray-600 mb-4">
                       Description courte de l'actualité ou de l'événement...
                     </p>
@@ -357,7 +368,7 @@ export default function ToutSavoir() {
       {/* Section S'impliquer */}
       <div className="py-16">
         <div className="container mx-auto px-4">
-          <motion.h2 
+          <motion.h2
             className="text-3xl md:text-4xl font-bold text-center mb-16 text-blue-600"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -366,7 +377,7 @@ export default function ToutSavoir() {
           >
             S'impliquer dans la CCEE
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
             variants={staggerContainer}
             initial="initial"
@@ -378,9 +389,9 @@ export default function ToutSavoir() {
                 <Heart className="h-16 w-16 text-red-500 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Devenir bénévole</h3>
                 <p className="text-gray-600 mb-4">Participez activement à l'organisation de nos événements et activités.</p>
-                <button className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full transition-colors">
+                <a href={createWhatsAppLink("Je veux devenir bénévole pour la CCEE")} target="_blank" rel="noopener noreferrer" className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full transition-colors inline-block">
                   Je veux aider
-                </button>
+                </a>
               </div>
             </motion.div>
             <motion.div variants={fadeInUp} whileHover={{ scale: 1.05 }}>
@@ -388,9 +399,9 @@ export default function ToutSavoir() {
                 <MessageCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Partager son témoignage</h3>
                 <p className="text-gray-600 mb-4">Inspirez d'autres étudiants en partageant votre expérience au sein de la CCEE.</p>
-                <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full transition-colors">
+                <a href={createWhatsAppLink("Je souhaite partager mon témoignage sur la CCEE")} target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full transition-colors inline-block">
                   Partager
-                </button>
+                </a>
               </div>
             </motion.div>
             <motion.div variants={fadeInUp} whileHover={{ scale: 1.05 }}>
@@ -398,9 +409,9 @@ export default function ToutSavoir() {
                 <Bookmark className="h-16 w-16 text-yellow-500 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Proposer une activité</h3>
                 <p className="text-gray-600 mb-4">Vous avez une idée pour une nouvelle activité ? Partagez-la avec nous !</p>
-                <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-full transition-colors">
+                <a href={createWhatsAppLink("J'ai une proposition d'activité pour la CCEE")} target="_blank" rel="noopener noreferrer" className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-full transition-colors inline-block">
                   Proposer
-                </button>
+                </a>
               </div>
             </motion.div>
           </motion.div>
@@ -409,3 +420,4 @@ export default function ToutSavoir() {
     </div>
   )
 }
+
