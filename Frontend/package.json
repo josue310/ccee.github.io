@@ -8,7 +8,8 @@
     "build": "vite build",
     "serve": "vite preview",
     "server": "nodemon server/server.js",
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "heroku-postbuild": "cd Frontend && npm install --legacy-peer-deps && npm run build"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
