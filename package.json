@@ -1,24 +1,24 @@
 {
   "name": "projet-ccee-version-2",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "node server.js",
-  "dev": "nodemon server.js",
-  "build": "cd Frontend && npm install && npm run build",
-  "heroku-postbuild": "npm run build"
-},
+    "start": "node server.js",
+    "build": "cd Frontend && npm install && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "keywords": [],
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.6",
     "express": "^4.21.1",
-    "mongoose": "^8.8.3",
-    "node": "^20.18.1",
-    "react-scripts": "^5.0.1"
+    "mongoose": "^8.8.3"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }
+
