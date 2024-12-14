@@ -209,7 +209,7 @@ function Formulaire() {
     try {
       setStatus({ type: 'info', message: 'Envoi en cours...' });
       
-      const response = await fetch('http://localhost:5000/api/messages/submit', {
+      const response = await fetch('/api/messages/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

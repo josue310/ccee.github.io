@@ -18,8 +18,11 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3000', // Remplacez par l'IP ou le nom de domaine de votre frontend
+  origin: ['http://localhost:5000', 'http://52.203.244.33:5000'], // Adresse de votre frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Méthodes autorisées
+  credentials: true, // Si vous gérez des cookies ou des sessions
 }));
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
