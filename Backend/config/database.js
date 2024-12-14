@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoURI = 'mongodb+srv://habibrolandt:USher1234@cluster0.gpbc4.mongodb.net/ProjetCCEE?retryWrites=true&w=majority&appName=Cluster0'
+const mongoURI = 'mongodb+srv://habibrolandt:6KwjDvVjbu2W4bzO@cluster0.gpbc4.mongodb.net/ProjetCCEE?retryWrites=true&w=majority&appName=Cluster0'
 // Fonction de connexion à MongoDB
 const connectDB = async () => {
   try {
